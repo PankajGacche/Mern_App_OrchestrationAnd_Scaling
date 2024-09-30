@@ -1,7 +1,7 @@
 # MERN Application Deplyment
 ## Step 1: Set Up the AWS Environment
 
-- 1. Set Up AWS CLI and Boto3:
+- Set Up AWS CLI and Boto3:
 
    - Install AWS CLI and configure it with AWS credentials.
      ![alt text](ReadME_Images/image.png)
@@ -10,13 +10,13 @@
 
 ## Step 2: Prepare the MERN Application
 
-- 1. Containerize the MERN Application:
+- Containerize the MERN Application:
 
    - Ensure the MERN application is containerized using Docker. Create a Dockerfile for each component (frontend and backend).
    ![alt text](ReadME_Images/image-2.png)
    ![alt text](ReadME_Images/image-3.png)
 
-- 2. Push Docker ReadME_Images/images to Amazon ECR:
+- Push Docker ReadME_Images/images to Amazon ECR:
 
    - Build Docker ReadME_Images/images for the frontend and backend.
      ![alt text](ReadME_Images/image-4.png)
@@ -31,7 +31,7 @@
 
 ## Step 3: Version Control
 
-- 1. Use AWS CodeCommit:
+- Use AWS CodeCommit:
 
    - Create a CodeCommit repository.
      ![alt text](ReadME_Images/image-9.png) 
@@ -40,13 +40,13 @@
 
 ## Step 4: Continuous Integration with Jenkins
 
-- 1. Set Up Jenkins:
+- Set Up Jenkins:
 
    - Install Jenkins on an EC2 instance.
    - Configure Jenkins with necessary plugins.
      ![alt text](ReadME_Images/image-11.png)
 
-- 2. Create Jenkins Jobs:
+- Create Jenkins Jobs:
 
    - Create Jenkins jobs for building and pushing Docker ReadME_Images/images to ECR.
 
@@ -60,7 +60,7 @@
 
 ## Step 5: Infrastructure as Code (IaC) with Boto3
 
-- 1. Define Infrastructure with Boto3 (Python Script):
+- Define Infrastructure with Boto3 (Python Script):
 
    - Use Boto3 to define the infrastructure (VPC, subnets, security groups).
    - Define an Auto Scaling Group (ASG) for the backend.
@@ -70,18 +70,18 @@
 
 ## Step 6: Deploying Backend Services
 
-- 1. Deploy Backend on EC2 with ASG:
+- Deploy Backend on EC2 with ASG:
 
    - Use Boto3 to deploy EC2 instances with the Dockerized backend application in the ASG.
    ![alt text](ReadME_Images/image-19.png)
 
 ## Step 7: Set Up Networking
 
-- 1. Create Load Balancer:
+- Create Load Balancer:
 
    - Set up an Elastic Load Balancer (ELB) for the backend ASG.
 
-- 2. Configure DNS:
+- Configure DNS:
 
    - Set up DNS using Route 53 or any other DNS service.
 
@@ -89,14 +89,14 @@
 
 ## Step 8: Deploying Frontend Services
 
-- 1. Deploy Frontend on EC2:
+- Deploy Frontend on EC2:
 
    - Use Boto3 to deploy EC2 instances with the Dockerized frontend application.
    ![alt text](ReadME_Images/image-21.png)
 
 ## Step 9: AWS Lambda Deployment
 
-- 1. Create Lambda Functions:
+- Create Lambda Functions:
 
 - Use Boto3 to create AWS Lambda functions for specific tasks within the application.
 
@@ -106,7 +106,7 @@
 
 ## Step 10: Kubernetes (EKS) Deployment
 
-- 1. Create EKS Cluster:
+- Create EKS Cluster:
 
    - Use eksctl or other tools to create an Amazon EKS cluster.
    ![alt text](ReadME_Images/image-23.png)
@@ -114,7 +114,7 @@
    ![alt text](ReadME_Images/image-25.png)
 
 
-- 2. Deploy Application with Helm:
+- Deploy Application with Helm:
 
    - Use Helm to package and deploy the MERN application on EKS.
    ![alt text](ReadME_Images/image-26.png)
@@ -122,12 +122,11 @@
    ![alt text](ReadME_Images/image-28.png)
 ## Step 11: Monitoring and Logging
 
-- 1. Set Up Monitoring:
+- Set Up Monitoring:
 
    - Use CloudWatch for monitoring and setting up alarms.
 
-
-- 2. Configure Logging:
+- Configure Logging:
 
    - Use CloudWatch Logs or another logging solution for collecting logs.
    
