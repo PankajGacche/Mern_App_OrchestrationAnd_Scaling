@@ -102,7 +102,7 @@
 
 - Backup of Db using Lambda Functions and store in S3 bucket - put time stamping on the backup
 
-![alt text](ReadME_Images/image-22.png)
+   ![alt text](ReadME_Images/image-22.png)
 
 ## Step 10: Kubernetes (EKS) Deployment
 
