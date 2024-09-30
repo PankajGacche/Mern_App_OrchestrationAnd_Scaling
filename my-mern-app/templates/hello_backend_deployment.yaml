@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-hello-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-hello-backend
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-hello-backend
+    spec:
+      containers:
+        - name: hello-backend
+          image: "{{ .Values.image.repository1 }}:latest"
+          ports:
+            - containerPort: 5000

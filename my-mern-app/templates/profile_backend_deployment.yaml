@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-profile-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-profile-backend
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-profile-backend
+    spec:
+      containers:
+        - name: profile-backend
+          image: "{{ .Values.image.repository2 }}:latest"
+          ports:
+            - containerPort: 5001

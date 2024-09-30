@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository1: 975050024946.dkr.ecr.eu-north-1.amazonaws.com/pankaj_backend_hello
+  tag1: hello-backend
+  repository2: 975050024946.dkr.ecr.eu-north-1.amazonaws.com/pankaj_backend_profile
+  tag2: profile-backend
+  repository3: 975050024946.dkr.ecr.eu-north-1.amazonaws.com/pankaj_frontend
+  tag3: frontend
+  
+service:
+  type: LoadBalancer
+  port: 80
